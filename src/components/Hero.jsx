@@ -68,7 +68,7 @@ export default function Hero() {
 
                 <div className="hero-image">
                     {/* Use public folder path */}
-                    <img src="/images/habilimage.jpg" alt="Me" />
+                    <img src="images/habilimage.jpg" alt="Me" />
                 </div>
 
             </div>
