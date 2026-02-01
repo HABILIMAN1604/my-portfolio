@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // **Import the image using Vite**
-import HabilImage from "./images/habilimage.jpg";  // <- adjust path relative to this file
+import HabilImage from "../images/habilimage.jpg";
 
 export default function Hero() {
     const roles = ["Software Developer", "Frontend Developer", "Backend Developer", "Software Tester"];
