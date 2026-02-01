@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from "react"; 
+import React, { useState, useEffect } from "react"; // Import useState and useEffect
 import "./Hero.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-// **Import the image using Vite**
-import HabilImage from "../images/habilimage.jpg";
-
+// List of roles to cycle through
 export default function Hero() {
     const roles = ["Software Developer", "Frontend Developer", "Backend Developer", "Software Tester"];
 
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
-    const [typingSpeed, setTypingSpeed] = useState(150);
+    const [typingSpeed, setTypingSpeed] = useState(150); // Initial typing speed
 
     useEffect(() => {
         const fullText = roles[currentRoleIndex];
@@ -38,7 +36,6 @@ export default function Hero() {
         }
 
         timer = setTimeout(handleTyping, typingSpeed);
-
         return () => clearTimeout(timer);
     }, [currentRoleIndex, displayedText, isDeleting, typingSpeed]);
 
@@ -54,11 +51,7 @@ export default function Hero() {
                         <span className="cursor">|</span>
                     </h1>
                     
-                    <p>
-                        Aspiring technology professional with a strong interest in building reliable and user-friendly digital solutions. 
-                        Passionate about learning new technologies, improving development skills, and turning ideas into real-world applications through clean and efficient code.
-                    </p>
-
+                    <p>Aspiring technology professional with a strong interest in building reliable and user-friendly digital solutions. Passionate about learning new technologies, improving development skills, and turning ideas into real-world applications through clean and efficient code.</p>
                     <div className="social-links">
                         <a href="/resume.pdf" className="btn">Download Resume</a>
                         <a href="https://instagram.com/habil__iman" target="_blank" rel="noreferrer">
@@ -74,8 +67,8 @@ export default function Hero() {
                 </div>
 
                 <div className="hero-image">
-                    {/* Use imported image here */}
-                    <img src={HabilImage} alt="Me" />
+                    {/* Use public folder path */}
+                    <img src="/images/habilimage.jpg" alt="Me" />
                 </div>
 
             </div>
