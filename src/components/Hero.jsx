@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"; // Import useState and useEf
 import "./Hero.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
+import habilImage from "../assets/habilimage.jpg";
 
 // List of roles to cycle through
 export default function Hero() {
@@ -68,7 +69,7 @@ export default function Hero() {
 
                 <div className="hero-image">
                     {/* Use public folder path */}
-                    <img src="images/habilimage.jpg" alt="Me" />
+                    <img src={habilImage} alt="Me" />
                 </div>
 
             </div>

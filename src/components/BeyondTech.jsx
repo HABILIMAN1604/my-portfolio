@@ -1,19 +1,23 @@
 import React, { useRef } from "react";
 import "./BeyondTech.css";
 
+// Import images from assets folder
+import portraitImg from "../assets/portrait_drawing.jpeg";
+import fitnessImg from "../assets/fitness_enthusiast.jpeg";
+
 export default function BeyondTech() {
 
     const beyondtechs = [
         {
             title: "Portrait Drawing",
             year: "2016-2020",
-            image: "/images/portrait_drawing.jpeg",
+            image: portraitImg, // Use imported variable
             summary: "I tried my hand at portrait drawing, exploring techniques, shading, and capturing expressions. It taught me patience and attention to detail."
         },
         {
             title: "Fitness Enthusiast",
             year: "2016-present",
-            image: "/images/fitness_enthusiast.jpeg",
+            image: fitnessImg, // Use imported variable
             summary: "Passionate about fitness and healthy living, I enjoy staying active, pushing my limits, and learning about nutrition and wellness."
         },
     ];
@@ -36,7 +40,7 @@ export default function BeyondTech() {
         const img = card.querySelector(".beyondtech-image");
 
         card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-        img.style.transform = "scale(1.1)"; // zoom background image slightly
+        img.style.transform = "scale(1.1)"; 
     };
 
     const resetCardTransform = (index) => {
@@ -64,6 +68,7 @@ export default function BeyondTech() {
                     >
                         <div 
                             className="beyondtech-image" 
+                            /* Updated to use the correct variable */
                             style={{ '--bg-image': `url(${beyondtech.image})` }} 
                         >
                             <img src={beyondtech.image} alt={beyondtech.title}/>
