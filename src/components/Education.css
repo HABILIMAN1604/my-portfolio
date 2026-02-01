@@ -1,0 +1,183 @@
+
+
+/* Modern Color Palette */
+:root {
+    --primary-color: #007bff; /* Bright Blue for active element */
+    --secondary-color: #6c757d; /* Grey for inactive elements */
+    --line-color: #dee2e6; /* Light grey for the timeline line */
+    --card-bg: #ffffff; /* White card background */
+    --text-color: #343a40; /* Dark text */
+}
+
+.educations {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-color: aliceblue;
+    color: var(--text-color);
+}
+
+
+/* --- Timeline Structure --- */
+
+.timeline-container {
+    /* Set the container for relative positioning of the line */
+    position: relative;
+    /* This makes the main container a Flex container, but the timeline items use absolute positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the timeline items horizontally */
+}
+
+/* The central vertical line */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px; /* Thickness of the line */
+    background-color: var(--line-color);
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Position the line in the center */
+    margin-left: -1px; /* Adjust to perfectly center */
+}
+
+/* --- Timeline Card Styling --- */
+
+.timeline-card {
+    /* Each item takes up the full width but its content is positioned left or right */
+    padding: 10px 0;
+    position: relative; /* Anchor for the dot and content */
+    width: 100%;
+    margin-bottom: 40px; /* Spacing between events */
+}
+
+.timeline-card:last-child {
+    margin-bottom: 0; /* Remove margin for the last item */
+}
+
+/* --- Content and Dot Alignment --- */
+
+.card-content {
+    /* Container for the summary and year */
+    display: flex;
+    align-items: center;
+    width: 45%; /* Content takes up 45% of the width */
+    position: relative; /* Anchor for minor elements inside the card */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Modern, soft shadow */
+    background-color: var(--card-bg);
+}
+
+/* Shared dot styling */
+.timeline-dot {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 3px solid #f8f9fa; /* Border matching background for a "floating" effect */
+}
+
+/* Highlight the active dot/card (e.g., the 2019 one) */
+.timeline-card:nth-child(2) .timeline-dot {
+    background-color: var(--primary-color); /* Active color */
+    box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.25); /* Glow effect */
+}
+
+.timeline-card:nth-child(2) .card-content {
+    border-left: 5px solid var(--primary-color); /* Highlight border */
+}
+
+.timeline-card:nth-child(2) .education-year h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+
+/* --- Left-Aligned Cards (Even index) --- */
+
+.timeline-card.left .card-content {
+    /* Pushes content to the left of the central line (50%) */
+    margin-right: 55%; 
+    float: left;
+    /* Year is on the right of the summary content for left cards */
+    flex-direction: row-reverse; 
+}
+
+.timeline-card.left .timeline-dot {
+    right: 50%; /* Position dot on the right edge of the card, meeting the central line */
+    margin-right: -10px; /* Adjust dot position over the central line */
+}
+
+.timeline-card.left .card-content::after {
+    /* Little arrow/pointer on the right side of the left card */
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    border-left: 15px solid var(--card-bg);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+
+/* --- Right-Aligned Cards (Odd index) --- */
+
+.timeline-card.right .card-content {
+    /* Pushes content to the right of the central line (50%) */
+    margin-left: 55%; 
+    float: right;
+    /* Year is on the left of the summary content for right cards */
+    flex-direction: row; 
+}
+
+.timeline-card.right .timeline-dot {
+    left: 50%; /* Position dot on the left edge of the card, meeting the central line */
+    margin-left: -10px; /* Adjust dot position over the central line */
+}
+
+.timeline-card.right .card-content::after {
+    /* Little arrow/pointer on the left side of the right card */
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    border-right: 15px solid var(--card-bg);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+
+/* --- Content Details --- */
+
+.education-year {
+    /* Year styling (e.g., 2016, 2019) */
+    text-align: center;
+    padding: 0 15px;
+    min-width: 80px;
+}
+
+.education-year h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.education-summary p {
+    /* Summary text styling */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #495057;
+}
+
+/* Clear float to prevent layout issues */
+.timeline-card::after {
+    content: "";
+    display: table;
+    clear: both;
+}

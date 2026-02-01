@@ -1,0 +1,112 @@
+.hero {
+  text-align: center;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-text{
+  flex: 1.4;
+  padding-right: 10px;
+  margin-right: 20px;
+  text-align:left
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+    text-align: left;
+}
+
+.btn {
+  padding: 18px 23px;
+  background-color: #1d4ed8;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between buttons and icons */
+  margin-top: 20px;
+}
+
+
+.social-links a:not(.btn) {
+  font-size: 1.9rem; /* icons bigger */
+  transition: color 0.3s;
+}
+
+.social-links a:not(.btn):hover {
+  color: #3b82f6;
+}
+
+.hero-image {
+  flex: 0.5;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+}
+
+.hero-image img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+
+/* --- Typing Animation Styles --- */
+
+/* Style for the typing line (optional, but good for consistency) */
+.typing-animation-text {
+    height: 1.2em; /* Ensure the height doesn't collapse during deletion */
+    min-width: 10px; /* Prevent shrinking */
+    display: inline-block;
+    color: #061157; /* Example color for the animated text */
+}
+
+/* Style for the blinking cursor */
+.cursor {
+    font-weight: 100;
+    font-size: 1.2em;
+    animation: blink 0.8s infinite;
+    display: inline-block;
+    margin-left: 5px; /* space between text and cursor */
+    opacity: 1;
+}
+
+/* Keyframes for the blinking cursor effect */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+

@@ -1,0 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style : none;
+
+}
+
+.page-title h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1.2vh;
+    margin-bottom: 50px;
+}
+
+
+/* Container for consistent width */
+.container {
+  margin-left: 190px;
+  margin-right: 190px;
+
+}
+

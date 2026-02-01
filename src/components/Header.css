@@ -1,0 +1,39 @@
+
+
+ .header-container{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+
+
+    background: linear-gradient(90deg, #ffffff, #65afff);
+  z-index: 1000; /* keeps it above content */
+}
+
+.nav-links{
+  display: flex;
+  gap:40px;
+  margin-right: 100px;
+}
+
+.nav-links a{
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.nav-links a:hover{
+  color: blue;
+  transform: scale(1.1);
+
+}

@@ -1,0 +1,47 @@
+.projects{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-wrapper {
+    display: flex;
+    flex-direction: column; /* vertical stack */
+    gap: 40px; /* space between projects */
+    padding: 40px 0;
+}
+
+.projects-wrapper hr {
+  border: none;
+  height: 1px;
+  background-color: #3c3c3c;
+  margin: 10px 0;
+}
+
+.project-card {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.projects-image img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.projects-summary-chips {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chip {
+    padding: 6px 12px;
+    background: #e6e6e6;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
