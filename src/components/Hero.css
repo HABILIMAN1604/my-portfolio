@@ -49,13 +49,13 @@
 .social-links {
   display: flex;
   align-items: center;
-  gap: 15px; /* space between buttons and icons */
+  gap: 15px; 
   margin-top: 20px;
 }
 
 
 .social-links a:not(.btn) {
-  font-size: 1.9rem; /* icons bigger */
+  font-size: 1.9rem; 
   transition: color 0.3s;
 }
 
@@ -78,27 +78,27 @@
 
 }
 
-/* --- Typing Animation Styles --- */
 
-/* Style for the typing line (optional, but good for consistency) */
+
+
 .typing-animation-text {
-    height: 1.2em; /* Ensure the height doesn't collapse during deletion */
-    min-width: 10px; /* Prevent shrinking */
+    height: 1.2em; 
+    min-width: 10px;
     display: inline-block;
-    color: #061157; /* Example color for the animated text */
+    color: #061157; 
 }
 
-/* Style for the blinking cursor */
+
 .cursor {
     font-weight: 100;
     font-size: 1.2em;
     animation: blink 0.8s infinite;
     display: inline-block;
-    margin-left: 5px; /* space between text and cursor */
+    margin-left: 5px; 
     opacity: 1;
 }
 
-/* Keyframes for the blinking cursor effect */
+
 @keyframes blink {
     0%, 100% {
         opacity: 1;

@@ -1,4 +1,6 @@
 .projects{
+    padding-top: 20px;
+    padding-bottom: 80px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -6,8 +8,8 @@
 
 .projects-wrapper {
     display: flex;
-    flex-direction: column; /* vertical stack */
-    gap: 40px; /* space between projects */
+    flex-direction: column;
+    gap: 40px;
     padding: 40px 0;
 }
 

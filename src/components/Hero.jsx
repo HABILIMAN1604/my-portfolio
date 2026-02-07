@@ -41,7 +41,7 @@ export default function Hero() {
     }, [currentRoleIndex, displayedText, isDeleting, typingSpeed]);
 
     return (
-        <section className="hero" id="hero">
+        <section className="hero" id="home">
             <div className="container hero-wrapper">
 
                 <div className="hero-text">
@@ -54,7 +54,16 @@ export default function Hero() {
                     
                     <p>Aspiring technology professional with a strong interest in building reliable and user-friendly digital solutions. Passionate about learning new technologies, improving development skills, and turning ideas into real-world applications through clean and efficient code.</p>
                     <div className="social-links">
-                        <a href="/resume.pdf" className="btn">Download Resume</a>
+<a
+  href={`${import.meta.env.BASE_URL}resume.pdf`}
+  target="_blank"
+  rel="noreferrer"
+  className="btn"
+>
+  View Resume
+</a>
+
+
                         <a href="https://instagram.com/habil__iman" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>

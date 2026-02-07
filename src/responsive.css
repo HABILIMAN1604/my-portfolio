@@ -1,0 +1,573 @@
+/* ========================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ======================================== */
+
+/* =====================================
+   LARGE TABLETS & SMALL LAPTOPS
+   ===================================== */
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .nav-links {
+    gap: 25px;
+    margin-right: 50px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .hero-image img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .projects-image img {
+    width: 300px;
+  }
+}
+
+/* =====================================
+   TABLETS (PORTRAIT)
+   ===================================== */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  /* Header Navigation */
+  .nav-links {
+    gap: 15px;
+    margin-right: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .header-container {
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: auto;
+    padding: 80px 0 40px;
+  }
+
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-text {
+    flex: 1;
+    padding-right: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .hero-image {
+    flex: 1;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* Projects Section */
+  .projects {
+    min-height: auto;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .projects-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .projects-descrition {
+    width: 100%;
+  }
+
+  .projects-summary-chips {
+    justify-content: center;
+  }
+
+  .page-title h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  /* BeyondTech Section */
+  .beyondtech {
+    min-height: auto;
+  }
+
+  .beyondtech-wrapper {
+    gap: 40px;
+    padding: 30px 0;
+  }
+
+  .beyondtech-card {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+  }
+
+  .beyondtech-content {
+    padding: 25px;
+  }
+
+  .beyondtech-title h2 {
+    font-size: 2rem;
+  }
+
+  .beyondtech-year h4 {
+    font-size: 0.95rem;
+  }
+
+  .beyondtech-summary p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  /* Skills Section */
+  .skills {
+    min-height: auto;
+  }
+
+  .skills-wrapper {
+    gap: 20px;
+  }
+
+  /* Education Section */
+  .education {
+    min-height: auto;
+  }
+
+  .education-wrapper {
+    gap: 30px;
+  }
+
+  /* Footer Section */
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/* =====================================
+   MOBILE DEVICES (LANDSCAPE)
+   ===================================== */
+@media (max-width: 640px) {
+  .container {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  /* Header - Mobile Menu */
+  .nav-links {
+    gap: 10px;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 70px 0 30px;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .social-links a:not(.btn) {
+    font-size: 1.6rem;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Projects Section */
+  .projects-wrapper {
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .projects-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .projects-title h2 {
+    font-size: 1.3rem;
+  }
+
+  .chip {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+
+  .projects-summary-text p {
+    font-size: 0.95rem;
+  }
+
+  .page-title h1 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  /* BeyondTech Section */
+  .beyondtech-wrapper {
+    gap: 30px;
+    padding: 25px 0;
+  }
+
+  .beyondtech-card {
+    height: 380px;
+    max-width: 450px;
+  }
+
+  .beyondtech-content {
+    padding: 20px;
+  }
+
+  .beyondtech-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .beyondtech-year h4 {
+    font-size: 0.9rem;
+  }
+
+  .beyondtech-summary p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* =====================================
+   MOBILE DEVICES (PORTRAIT)
+   ===================================== */
+@media (max-width: 480px) {
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /* Header - Compact Mobile Menu */
+  .header-container {
+    padding: 8px 0;
+  }
+
+  .nav-links {
+    gap: 8px;
+    margin-right: 10px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .typing-animation-text {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+
+  .btn {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
+
+  .social-links a:not(.btn) {
+    font-size: 1.5rem;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Projects Section */
+  .projects-wrapper {
+    gap: 25px;
+    padding: 20px 0;
+  }
+
+  .project-card {
+    gap: 20px;
+  }
+
+  .projects-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .projects-title h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .projects-summary-chips {
+    gap: 8px;
+    margin: 8px 0;
+  }
+
+  .chip {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+
+  .projects-summary-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .page-title h1 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding: 1vh;
+  }
+
+  /* BeyondTech Section */
+  .beyondtech-wrapper {
+    gap: 25px;
+    padding: 20px 0;
+  }
+
+  .beyondtech-card {
+    height: 350px;
+    max-width: 100%;
+  }
+
+  .beyondtech-content {
+    padding: 20px;
+  }
+
+  .beyondtech-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .beyondtech-year h4 {
+    font-size: 0.85rem;
+  }
+
+  .beyondtech-summary p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* =====================================
+   EXTRA SMALL DEVICES
+   ===================================== */
+@media (max-width: 360px) {
+  .container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .nav-links {
+    gap: 5px;
+    margin-right: 5px;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .typing-animation-text {
+    font-size: 1.3rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .social-links a:not(.btn) {
+    font-size: 1.3rem;
+  }
+
+  .hero-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .projects-title h2 {
+    font-size: 1.1rem;
+  }
+
+  .chip {
+    font-size: 0.75rem;
+  }
+
+  .projects-summary-text p {
+    font-size: 0.85rem;
+  }
+
+  .page-title h1 {
+    font-size: 1.2rem;
+  }
+
+  /* BeyondTech Section */
+  .beyondtech-wrapper {
+    gap: 20px;
+    padding: 15px 0;
+  }
+
+  .beyondtech-card {
+    height: 320px;
+  }
+
+  .beyondtech-content {
+    padding: 15px;
+  }
+
+  .beyondtech-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .beyondtech-year h4 {
+    font-size: 0.8rem;
+  }
+
+  .beyondtech-summary p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
+
+/* =====================================
+   ADDITIONAL RESPONSIVE UTILITIES
+   ===================================== */
+
+/* Fix for horizontal scroll on mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  .nav-links a,
+  .btn,
+  .social-links a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Optimize images for mobile */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
