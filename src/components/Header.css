@@ -42,7 +42,7 @@
    Three-bar → X animation on .open
    ───────────────────────────────────────── */
 .hamburger {
-  display: none; /* hidden by default on desktop */
+  display: none; 
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -64,7 +64,7 @@
   transform-origin: center;
 }
 
-/* Animate into X when open */
+
 .hamburger.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -75,27 +75,22 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ─────────────────────────────────────────
-   MOBILE NAV DRAWER
-   Slide down from fixed header on mobile.
-   ───────────────────────────────────────── */
+
 @media (max-width: 768px) {
   /* Show hamburger */
   .hamburger {
     display: flex;
   }
 
-  /* header-container: keep fixed so it stays sticky on scroll */
   .header-container {
     justify-content: flex-end;
     padding: 10px 20px;
     position: fixed;
   }
 
-  /* Nav hidden by default — slide in when .nav-open */
   .nav {
     position: fixed;
-    top: 52px; /* clears the fixed header bar height */
+    top: 52px; 
     left: 0;
     width: 100%;
     background-color: #fff;
@@ -107,11 +102,10 @@
   }
 
   .nav.nav-open {
-    max-height: 400px; /* tall enough for all 6 items */
+    max-height: 400px; 
     padding: 10px 0 16px;
   }
 
-  /* Stack nav items vertically */
   .nav-links {
     flex-direction: column;
     align-items: center;
@@ -134,7 +128,6 @@
     border-radius: 0;
   }
 
-  /* Keep active pill style but full-width */
   .nav-links a.active {
     border-radius: 0;
     margin: 0 16px;
