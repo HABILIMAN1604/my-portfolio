@@ -3,6 +3,7 @@ import "./Header.css";
 
 export default function Header() {
   const [active, setActive] = useState("Home");
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     "Home",
@@ -39,14 +40,24 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <nav>
+        <button
+          className={`hamburger${isOpen ? " open" : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav className={`nav${isOpen ? " nav-open" : ""}`}>
           <ul className="nav-links">
             {navItems.map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
                   className={active === item ? "active" : ""}
-                  onClick={() => setActive(item)}
+                  onClick={() => { setActive(item); setIsOpen(false); }}
                 >
                   {item}
                 </a>

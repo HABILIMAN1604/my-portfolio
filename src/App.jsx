@@ -7,6 +7,7 @@ import Education from "./components/Education";
 import BeyondTech from "./components/BeyondTech";
 import Footer from "./components/Footer";
 import './App.css'
+import './responsive.css'
 
 function App() {
     return (
